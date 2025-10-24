@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clínica Mirante - Atendimento Humanizado</title>
+  <meta name="description" content="Clínica Mirante — Atendimento humanizado em Mirante do Paranapanema. Agende sua consulta."/>
+  <style>
+    :root{
+      --primary: #0088cc;
+      --muted: #6b7280;
+      --card-bg: #ffffff;
+      --page-bg: #f7fafc;
+      --radius: 12px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--page-bg);color:#111827;line-height:1.5}
+    header{background:linear-gradient(90deg,var(--primary),#0a7bb3);color:white;padding:20px 16px}
+    .container{max-width:1100px;margin:0 auto;padding:20px}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo .badge{background:rgba(255,255,255,0.12);padding:10px;border-radius:10px;font-weight:700}
+    nav a{color:white;text-decoration:none;margin-left:18px;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:center;padding:36px 0}
+    .hero h1{font-size:28px;margin:0 0 10px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .btn{display:inline-block;background:var(--primary);color:white;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;cursor:pointer}
+    .card{background:var(--card-bg);border-radius:var(--radius);box-shadow:0 6px 20px rgba(15,23,42,0.06);padding:18px}
+    .doctors{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+    .doc{display:flex;gap:12px;align-items:center}
+    .avatar{width:64px;height:64px;border-radius:12px;background:linear-gradient(180deg,#e6f3fb,#fff);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--primary)}
+    footer{padding:20px 0;color:var(--muted);font-size:14px}
+    .two-col{display:grid;grid-template-columns:1fr 320px;gap:20px}
+    .contact-list li{margin-bottom:8px}
+    .map{width:100%;height:280px;border-radius:10px;overflow:hidden}
+    form label{display:block;margin-top:10px;font-weight:600}
+    form input, form select, form textarea{width:100%;padding:10px;border:1px solid #d1d5db;border-radius:8px;margin-top:6px}
+    form button{margin-top:14px}
+    .success{background:#d1fae5;color:#065f46;padding:10px;border-radius:8px;margin-top:10px;display:none}
+    @media (max-width:880px){ .hero{grid-template-columns:1fr;}.two-col{grid-template-columns:1fr} nav{display:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <div class="logo">
+        <div class="badge">Clínica Mirante</div>
+        <div>
+          <div style="font-weight:700">Clínica Mirante</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.9)">Saúde com empatia em Mirante do Paranapanema</div>
+        </div>
+      </div>
+      <nav aria-label="menu">
+        <a href="#sobre">Sobre</a>
+        <a href="#medicos">Médicos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Atendimento humano. Especialistas de confiança.</h1>
+        <p>Na Clínica Mirante oferecemos consulta médica em diversas especialidades — ginecologia, cardiologia, dermatologia, pediatria e mais. Agende online ou fale com nossa secretária virtual, Maria.</p>
+        <div style="display:flex;gap:12px;align-items:center">
+          <a class="btn" href="#agendar" id="btn-agendar">Agendar consulta</a>
+          <a class="btn" href="https://api.whatsapp.com/send?phone=5518998108546&text=Olá%20Clínica%20Mirante%2C%20gostaria%20de%20agendar%20uma%20consulta" style="background:#25D366">WhatsApp</a>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <strong>Horário de funcionamento</strong>
+          <div style="margin-top:6px;color:var(--muted)">
+            Seg–Sex: 08:00–18:00 · Sáb: 08:00–12:00 · Dom: Fechado
+          </div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <strong>Próximos passos</strong>
+        <ul style="margin-top:10px;color:var(--muted)">
+          <li>Agende sua consulta online</li>
+          <li>Peça orientações de preparo de exames</li>
+          <li>Consulte resultados e boletos</li>
+        </ul>
+        <div style="margin-top:14px">
+          <a class="btn" href="#contato">Fale conosco</a>
+        </div>
+      </aside>
+    </section>
+
+    <section id="sobre" style="margin-top:28px">
+      <div class="card">
+        <h2>Sobre a Clínica Mirante</h2>
+        <p style="color:var(--muted)">Localizada em Mirante do Paranapanema — Rua Amélia Fussae Okubo, 856 — nossa equipe alia experiência clínica e atendimento humanizado. Priorizamos acolhimento, segurança e cuidado individualizado.</p>
+      </div>
+    </section>
+
+    <section id="medicos" style="margin-top:18px">
+      <div class="card">
+        <h2>Médicos e Especialidades</h2>
+        <div class="doctors">
+          <div class="doc">
+            <div class="avatar">DT</div>
+            <div>
+              <div style="font-weight:700">Dra. Tânia Maria Tenório de Farias</div>
+              <div style="font-size:13px;color:var(--muted)">CRM 19.723 · Ginecologia, Obstetrícia, Clínica Geral</div>
+            </div>
+          </div>
+          <div class="doc">
+            <div class="avatar">OT</div>
+            <div>
+              <div style="font-weight:700">Dr. Otávio Tenório de Farias</div>
+              <div style="font-size:13px;color:var(--muted)">CRM 101.747 · Cardiologia, Clínica Médica</div>
+            </div>
+          </div>
+          <div class="doc">
+            <div class="avatar">NG</div>
+            <div>
+              <div style="font-weight:700">Dra. Natália Gardin</div>
+              <div style="font-size:13px;color:var(--muted)">CRM 149.040 · Dermatologia, Medicina Estética</div>
+            </div>
+          </div>
+          <div class="doc">
+            <div class="avatar">SR</div>
+            <div>
+              <div style="font-weight:700">Dra. Sarah Regina Franco</div>
+              <div style="font-size:13px;color:var(--muted)">CRM 79.449 · Pediatria, Nutrologia, Neonatologia</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="agendar" style="margin-top:18px">
+      <div class="card">
+        <h2>Agende sua consulta</h2>
+        <p style="color:var(--muted)">Preencha o formulário abaixo e entraremos em contato para confirmar seu horário.</p>
+
+        <form id="form-agendar">
+          <label for="nome">Nome completo</label>
+          <input id="nome" name="nome" required />
+
+          <label for="telefone">Telefone / WhatsApp</label>
+          <input id="telefone" name="telefone" required />
+
+          <label for="especialidade">Especialidade</label>
+          <select id="especialidade" name="especialidade" required>
+            <option value="">Selecione</option>
+            <option>Ginecologia</option>
+            <option>Obstetrícia</option>
+            <option>Clínica Geral</option>
+            <option>Cardiologia</option>
+            <option>Dermatologia</option>
+            <option>Medicina Estética</option>
+            <option>Pediatria</option>
+            <option>Nutrologia</option>
+            <option>Neonatologia</option>
+          </select>
+
+          <label for="data">Data preferencial</label>
+          <input id="data" name="data" type="date" />
+
+          <label for="mensagem">Mensagem (opcional)</label>
+          <textarea id="mensagem" name="mensagem" rows="3"></textarea>
+
+          <button type="submit" class="btn">Enviar solicitação</button>
+          <div class="success" id="msg-sucesso">✅ Obrigado! Sua solicitação de agendamento foi enviada com sucesso. Nossa equipe entrará em contato em breve.</div>
+        </form>
+      </div>
+    </section>
+
+    <section id="contato" style="margin-top:18px">
+      <div class="card">
+        <h2>Localização</h2>
+        <div class="map">
+          <iframe src="https://www.google.com/maps?q=Rua+Amélia+Fussae+Okubo,+856,+Mirante+do+Paranapanema,+SP&output=embed" width="100%" height="280" style="border:0" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+      <div>© Clínica Mirante — CNPJ 00.222.105/0001-95</div>
+      <div style="text-align:right">
+        Rua Amélia Fussae Okubo, 856 · Mirante do Paranapanema · SP
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script de envio do formulário -->
+  <script>
+    document.getElementById('form-agendar').addEventListener('submit', async function(e){
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(this).entries());
+      try {
+        const res = await fetch('https://api.clinicamirante.com.br/agendar', {
+          method:'POST',
+          headers:{'Content-Type':'application/json','Authorization':'Bearer {{TOKEN_API_CLINICA_MIRANTE}}'},
+          body:JSON.stringify(data)
+        });
+        if(res.ok){
+          document.getElementById('msg-sucesso').style.display='block';
+          this.reset();
+        } else {
+          // fallback e-mail (simulado)
+          window.location.href = 'mailto:clinicamirante@hotmail.com?subject=Agendamento&body=' + encodeURIComponent(JSON.stringify(data,null,2));
+        }
+      } catch(err){
+        window.location.href = 'mailto:clinicamirante@hotmail.com?subject=Agendamento&body=' + encodeURIComponent(JSON.stringify(data,null,2));
+      }
+    });
+  </script>
+
+  <!-- Chatbot Maria - Converza.io -->
+  <script>
+    (function(d, t) {
+      var s = d.createElement(t), options = {
+        domain: "app.converza.io",
+        botId: "bot-maria-mirante-final-perfeita",
+        name: "Maria - Secretária Virtual 💙",
+        color: "#0088cc",
+        position: "right",
+        greeting: "Oi! Sou a Maria 😊 da Clínica Mirante. Quer agendar sua consulta ou tirar dúvidas?",
+        bubble: true
+      };
+      s.src = "https://app.converza.io/widget.js";
+      s.async = true;
+      s.onload = function() { window.ConverzaWidget && window.ConverzaWidget.init(options); };
+      d.head.appendChild(s);
+    })(document, "script");
+  </script>
+
+</body>
+</html>
